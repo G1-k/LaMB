@@ -1,4 +1,4 @@
-//]: # (Image Reference)
+[//]: # (Image Reference)
 
 [image1]: ./images/1.jpg
 
@@ -28,13 +28,19 @@ catkin build
 #### Launch Respective Nodes
 
 1. Arduino Bridge Node
-` roslaunch ros_arduino_python arduino.launch`
+```
+roslaunch ros_arduino_python arduino.launch
+```
 
 2. RPLidar Node
-` roslaunch rplidar_ros rplidar.launch`
+```
+ roslaunch rplidar_ros rplidar.launch
+ ```
 
 3. Gmapping node
-` roslaunch lamb gmapping.launch`
+``` 
+roslaunch lamb gmapping.launch
+```
 
 4. Visualization
 ```
@@ -42,19 +48,28 @@ cd catkin_ws/src/lamb/rviz
 rviz -d map.rviz
 ```
 5. Teleop Node
-` rosrun teleop_twist_keyboard teleop_twist_keyboard.py `
+```
+ rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+```
 Using Arrow keys drive the robot around to generate map.
 
 6. After completing map, Save it 
-` rosrun map_server map_saver -f ~ ~/catkin_ws/src/lamb/maps/name_of_map`
+```
+ rosrun map_server map_saver -f ~ ~/catkin_ws/src/lamb/maps/name_of_map
+```
+
 
 ### Navigation
 
 1. AMCL Node
-` roslaunch lamb amcl.launch map:='name-of-map`
+```
+ roslaunch lamb amcl.launch map:='name-of-map
+```
 
 2. Move base Node
-`roslaunch lamb move_base.launch`
+```
+roslaunch lamb move_base.launch
+```
 
 3. Visualization
 ```
