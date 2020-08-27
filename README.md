@@ -88,3 +88,11 @@ roslaunch lamb move_base.launch
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 This work/project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License][cc-by-nc-sa]. Please read the license before replicating the project.<br>
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+### Contributing 
+
+1. Fork it!
+2. Create your feature branch : ` git checkout -b my-new-feature`
+3. Commit your changes: ` git commit -am 'Add some feature`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
