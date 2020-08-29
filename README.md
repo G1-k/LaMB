@@ -13,12 +13,14 @@ LaMB is a differential drive robot which uses SLAM with RPLidar to navigate in i
 
 ### Getting Started
 
-1. Clone the repository
+1. Give a star to this repo (at the top) 
+
+2. Clone the repository
 
 - `cd catkin_ws/src`
 - `git clone https://github.com/G1-k/LaMB.git`
 
-2. Build the workspace
+3. Build the workspace
 ```
 cd ..
 catkin build
@@ -27,33 +29,39 @@ catkin build
 
 #### Launch Respective Nodes
 
-1. Arduino Bridge Node
+1. Launch Hardware related Nodes:
 ```
-roslaunch ros_arduino_python arduino.launch
+roslaunch lamb hardware.launch
 ```
+OR Launch these individually(Optional):
 
-2. RPLidar Node
-```
- roslaunch rplidar_ros rplidar.launch
- ```
+	* Arduino Bridge Node
+	```
+	roslaunch ros_arduino_python arduino.launch
+	```
 
-3. Gmapping node
+	* RPLidar Node
+	```
+ 	roslaunch rplidar_ros rplidar.launch
+ 	```
+
+2. Gmapping node
 ``` 
 roslaunch lamb gmapping.launch
 ```
 
-4. Visualization
+3. Visualization
 ```
 cd catkin_ws/src/lamb/rviz 
 rviz -d map.rviz
 ```
-5. Teleop Node
+4. Teleop Node
 ```
  rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
 ```
 Using Arrow keys drive the robot around to generate map.
 
-6. After completing map, Save it 
+5. After completing map, Save it 
 ```
  rosrun map_server map_saver -f ~ ~/catkin_ws/src/lamb/maps/name_of_map
 ```
@@ -61,22 +69,28 @@ Using Arrow keys drive the robot around to generate map.
 
 ### Navigation
 
-1. AMCL Node
+1. Launch Navigation:
 ```
- roslaunch lamb amcl.launch map:='name-of-map
-```
+roslaunch lamb navigation.launch savedmap:='name-of-map'
+``` 
+OR Launch these individually (Optional)
 
-2. Move base Node
-```
-roslaunch lamb move_base.launch
-```
+	* AMCL Node
+	```
+ 	roslaunch lamb amcl.launch map:='name-of-map
+	```
 
-3. Visualization
+	* Move base Node
+	```
+	roslaunch lamb move_base.launch
+	```
+
+2. Visualization
 ```
  cd catkin_ws/src/lamb/rviz
  rviz -d navigate.rviz
 ```
-4. Go to goal
+3. Go to goal
 * Set initial pose using 2D pose estimate in Rviz.
 * Optional : Use teleop until pose estimates(red_particles) are accurate.
 * Set goal postion and orientation using 2D Nav goal 
