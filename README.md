@@ -36,14 +36,14 @@ roslaunch lamb hardware.launch
 OR Launch these individually(Optional):
 
 	* Arduino Bridge Node
-	```
+	
 	roslaunch ros_arduino_python arduino.launch
-	```
+	
 
 	* RPLidar Node
-	```
+	
  	roslaunch rplidar_ros rplidar.launch
- 	```
+ 	
 
 2. Gmapping node
 ``` 
@@ -52,7 +52,7 @@ roslaunch lamb gmapping.launch
 
 3. Visualization
 ```
-cd catkin_ws/src/lamb/rviz 
+cd catkin_ws/src/LaMB/rviz 
 rviz -d map.rviz
 ```
 4. Teleop Node
@@ -76,18 +76,18 @@ roslaunch lamb navigation.launch savedmap:='name-of-map'
 OR Launch these individually (Optional)
 
 	* AMCL Node
-	```
+	
  	roslaunch lamb amcl.launch map:='name-of-map
-	```
+	
 
 	* Move base Node
-	```
+	
 	roslaunch lamb move_base.launch
-	```
+	
 
 2. Visualization
 ```
- cd catkin_ws/src/lamb/rviz
+ cd catkin_ws/src/LaMB/rviz
  rviz -d navigate.rviz
 ```
 3. Go to goal
