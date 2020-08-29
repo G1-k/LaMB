@@ -10,13 +10,13 @@
 
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find LaMB)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find LaMB)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />   
-    <rosparam file="$(find LaMB)/param/local_costmap_params.yaml" command="load" />   
-    <rosparam file="$(find LaMB/param/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find LaMB/param/dwa_local_planner_params.yaml" command="load" />
-    <rosparam file="$(find LaMB)/param/move_base_params.yaml" command="load" />
-    <rosparam file="$(find LaMB)/param/navfn_global_planner_params.yaml" command="load" />
+    <rosparam file="$(find lamb)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find lamb)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />   
+    <rosparam file="$(find lamb)/param/local_costmap_params.yaml" command="load" />   
+    <rosparam file="$(find lamb)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find lamb)/param/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find lamb)/param/move_base_params.yaml" command="load" />
+    <rosparam file="$(find lamb)/param/navfn_global_planner_params.yaml" command="load" />
     
     
     <!-- reset frame_id parameters using user input data -->

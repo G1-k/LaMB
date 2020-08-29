@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <include file="$(find ros_arduino_python)/launch/arduino.launch" />
+  <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+
+</launch>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="savedmap" default=""/>
+  
+
+  <include file="$(find lamb)/launch/amcl.launch">
+  	<arg name="map" value="$(arg savedmap)"/>
+  </include>
+  <include file="$(find lamb)/launch/move_base.launch" />
+
+</launch>
