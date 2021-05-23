@@ -1,6 +1,6 @@
 [//]: # (Image Reference)
 
-[image1]: ./images/1.jpg
+[image1]: ./images/lamb.jpg
 
 
 # LaMB <br> [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
