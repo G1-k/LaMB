@@ -16,10 +16,16 @@ LaMB is a differential drive robot which uses SLAM with RPLidar to navigate in i
 
 1. Give a star to this repo (at the top) 
 
-2. Clone the repository
+2. Install Pre-requisite
+```
+sudo apt-get install ros-melodic-gmapping ros-melodic-teleop-twist-keyboard ros-melodic-map-server ros-melodic-amcl ros-melodic-move-base
+```
+
+3. Clone the repository
 
 - `cd catkin_ws/src`
 - `git clone https://github.com/G1-k/LaMB.git`
+- `git clone https://github.com/NickL77/RPLidar_Hector_SLAM.git`	
 
 3. Build the workspace
 ```
